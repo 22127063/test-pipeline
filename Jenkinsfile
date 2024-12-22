@@ -5,7 +5,7 @@ pipeline {
         // Define variables
         DOCKER_IMAGE_NAME = 'test-pipeline'
         DOCKER_REPO = '22127063'
-        GIT_REPO = 'https://github.com/your-username/your-repository.git'
+        GIT_REPO = 'https://github.com/22127063/test-pipeline.git'
         DOCKER_TAG = "latest"  // You can replace this with dynamic tag if needed
     }
 
