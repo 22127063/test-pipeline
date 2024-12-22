@@ -26,11 +26,9 @@ pipeline {
             }
         }
 
-        stages {
-            stage('Verify Docker') {
-                steps {
-                    sh 'docker --version'
-                }
+        stage('Verify Docker') {
+            steps {
+                sh 'docker --version'
             }
         }
 
