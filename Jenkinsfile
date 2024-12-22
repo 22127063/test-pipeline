@@ -32,22 +32,22 @@ pipeline {
             }
         }
 
-        stage('Publish to Docker Hub') {
-            steps {
-                script {
+    //     stage('Publish to Docker Hub') {
+    //         steps {
+    //             script {
                     
-                }
-            }
-        }
+    //             }
+    //         }
+    //     }
 
-        stage('Deploy to Container') {
-            steps {
-                script {
+    //     stage('Deploy to Container') {
+    //         steps {
+    //             script {
                    
-                }
-            }
-        }
-    }
+    //             }
+    //         }
+    //     }
+    // }
 
     post {
         always {
