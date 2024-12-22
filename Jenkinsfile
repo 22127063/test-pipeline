@@ -9,6 +9,7 @@ pipeline {
         DOCKER_TAG = "latest"  // You can replace this with dynamic tag if needed
         DOCKER_IMAGE = ''
         REGISTRY = '22127063/test-pipeline'
+        REGISTRY_CREDENTIAL = '6d444422-d618-49db-ac39-7092a1c13edc'
     }
 
     stages {
@@ -32,21 +33,16 @@ pipeline {
             }
         }
 
-    //     stage('Publish to Docker Hub') {
-    //         steps {
-    //             script {
-                    
-    //             }
-    //         }
-    //     }
+        stage('Upload to Docker Hub') {
+            steps {
+                script {
+                    docker.withRegistry('', REGISTRY_CREDENTIAL) {
+                        DOCKER_IMAGE.push()
+                    }
+                }
+            }
+        }
 
-    //     stage('Deploy to Container') {
-    //         steps {
-    //             script {
-                   
-    //             }
-    //         }
-    //     }
     }
 
     post {
